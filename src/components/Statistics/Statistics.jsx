@@ -1,31 +1,35 @@
-// import propTypes from 'prop-types';
-// import styles from './styles.module.css';
+import propTypes from 'prop-types';
+import styles from './styles.module.css';
 
-// <section class="statistics">
-//   <h2 class="title">Upload stats</h2>
+const Statistics = ({ stats, title }) => (
+  <section className={styles.statistics}>
+    {title && <h2 className={styles.title}>{title}</h2>}
+    <ul className={styles.list}>
+      {stats.map(({ id, label, percentage }) => (
+        <li
+          style={{
+            backgroundColor: getRandomHexColor(),
+          }}
+          className={styles.item}
+          key={id}
+        >
+          <span className={styles.label}>{label}</span>
+          <span className={styles.percentage}>{percentage}</span>
+        </li>
+      ))}
+    </ul>
+  </section>
+);
 
-//   <ul class="stat-list">
-//     <li class="item">
-//       <span class="label">.docx</span>
-//       <span class="percentage">4%</span>
-//     </li>
-//     <li class="item">
-//       <span class="label">.mp3</span>
-//       <span class="percentage">14%</span>
-//     </li>
-//     <li class="item">
-//       <span class="label">.pdf</span>
-//       <span class="percentage">41%</span>
-//     </li>
-//     <li class="item">
-//       <span class="label">.mp4</span>
-//       <span class="percentage">12%</span>
-//     </li>
-//   </ul>
-// </section>;
+function getRandomHexColor() {
+  return `#${Math.floor(Math.random() * 16777215)
+    .toString(16)
+    .padStart(6, 0)}`;
+}
 
-// function getRandomHexColor() {
-//   return `#${Math.floor(Math.random() * 16777215)
-//     .toString(16)
-//     .padStart(6, 0)}`;
-// }
+Statistics.propTypes = {
+  stats: propTypes.string.isRequired,
+  title: propTypes.string.isRequired,
+};
+
+export { Statistics };

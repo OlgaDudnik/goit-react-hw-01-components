@@ -18,9 +18,7 @@ const Profile = ({ username, tag, location, avatar, stats }) => {
         </li>
         <li className={styles.item}>
           <span className={styles.label}>Views</span>
-          <span className={styles.quantity}>
-            {stats.views.toLocaleString()}
-          </span>
+          <span className={styles.quantity}>{stats.views}</span>
         </li>
         <li className={styles.item}>
           <span className={styles.label}>Likes</span>
@@ -36,10 +34,7 @@ Profile.propTypes = {
   avatar: propTypes.string.isRequired,
   tag: propTypes.string.isRequired,
   location: propTypes.string.isRequired,
-  stats: propTypes.string.isRequired,
-  followers: propTypes.number.isRequired,
-  views: propTypes.number.isRequired,
-  likes: propTypes.number.isRequired,
+  stats: propTypes.object.isRequired,
 };
 
-export default Profile;
+export { Profile };
