@@ -28,8 +28,14 @@ function getRandomHexColor() {
 }
 
 Statistics.propTypes = {
-  stats: propTypes.string.isRequired,
   title: propTypes.string.isRequired,
+  stats: propTypes.arrayOf(
+    propTypes.shape({
+      id: propTypes.string,
+      label: propTypes.string,
+      percentage: propTypes.number,
+    }).isRequired
+  ),
 };
 
 export { Statistics };

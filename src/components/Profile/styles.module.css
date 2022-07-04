@@ -1,12 +1,14 @@
 .profile {
   display: flex;
   flex-direction: column;
-  margin: 30px auto;
-  width: 285px;
-  min-height: 350px;
-  box-shadow: 5px 5px 15px 5px #000000;
+  margin-top: 30px;
+  width: 305px;
+  min-height: 385px;
+  box-shadow: 5px 5px 15px 5px #00000063;
   background-color: rgb(250, 195, 252);
   border: 1px solid rgb(242 89 242 / 19%);
+  align-items: center;
+  justify-content: center;
 }
 .description {
   display: flex;
@@ -50,6 +52,7 @@
   list-style: none;
   margin-top: auto;
   border-top: 1px solid rgb(242 89 242 / 19%);
+  width: 100%;
 }
 .stats li {
   display: flex;
@@ -69,7 +72,7 @@
   margin-bottom: 8px;
   font-size: 13px;
   font-weight: bold;
-  opacity: 0.8;
+  /* opacity: 0.8; */
   color: #747474;
 }
 .quantity {

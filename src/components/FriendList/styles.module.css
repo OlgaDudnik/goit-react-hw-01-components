@@ -1,0 +1,33 @@
+.list {
+  justify-content: center;
+  align-items: center;
+}
+.item {
+  display: flex;
+  align-items: center;
+  box-shadow: 5px 5px 15px 5px #00000063;
+  height: 80px;
+  padding: 10px;
+}
+.item:not(:last-child) {
+  margin-bottom: 20px;
+}
+.status {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: turquoise;
+}
+
+.disabled {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: rgb(250, 195, 252);
+}
+.name {
+  font-size: 30px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  padding-left: 10px;
+}
